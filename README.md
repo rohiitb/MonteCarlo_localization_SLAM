@@ -11,22 +11,22 @@ This project was done as a part of the course ESE650 : Learning  in Robotics at 
 
 <table>
   <tr>
-      <td align = "center"> <img src="./Results/0.png" /> </td>
-      <td align = "center"> <img src="./Results/1.png" /> </td>
+      <td align = "center"> <img src="./Results/map1.png" /> </td>
+      <td align = "center"> <img src="./Results/map2.png" /> </td>
   </tr>
   <tr>
-      <td align = "center"> World 0 </td>
       <td align = "center"> World 1 </td>
+      <td align = "center"> World 2 </td>
   </tr>
 </table>
 
 <table>
   <tr>
-      <td align = "center"> <img src="./Results/2.png" /> </td>
-      <td align = "center"> <img src="./Results/3.png" /> </td>
+      <td align = "center"> <img src="./Results/map3.png" /> </td>
+      <td align = "center"> <img src="./Results/map4.png" /> </td>
   </tr>
   <tr>
-      <td align = "center"> World 2 </td>
       <td align = "center"> World 3 </td>
+      <td align = "center"> World 4 </td>
   </tr>
 </table>
