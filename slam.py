@@ -16,8 +16,7 @@ logger.setLevel(os.environ.get("LOGLEVEL", "INFO"))
 
 class map_t:
     """
-    This will maintain the occupancy grid and log_odds. You do not need to change anything
-    in the initialization
+    This will maintain the occupancy grid and log_odds. 
     """
 
     def __init__(s, resolution=0.05):
@@ -48,11 +47,9 @@ class map_t:
     def grid_cell_from_xy(s, x, y):
         """
         x and y are 1-dimensional arrays, compute the cell indices in the map corresponding
-        to these (x,y) locations. You should return an array of shape 2 x len(x). Be
-        careful to handle instances when x/y go outside the map bounds, you can use
-        np.clip to handle these situations.
+        to these (x,y) locations. You should return an array of shape 2 x len(x). 
         """
-        #### TODO: XXXXXXXXXXX
+
         x_clipped = np.clip(x, s.xmin, s.xmax)
         y_clipped = np.clip(y, s.ymin, s.ymax)
         x_grid = np.ceil((x_clipped - s.xmin) / s.resolution).astype(np.int16)  # - 1
@@ -63,12 +60,6 @@ class map_t:
 
 
 class slam_t:
-    """
-    s is the same as self. In Python it does not really matter
-    what we call self, s is shorter. As a general comment, (I believe)
-    you will have fewer bugs while writing scientific code if you
-    use the same/similar variable names as those in the mathematical equations.
-    """
 
     def __init__(s, resolution=0.05, Q=1e-3 * np.eye(3),
                  resampling_threshold=0.3):
@@ -141,7 +132,6 @@ class slam_t:
         particles with w = 1 x n array of weights and returns new particle
         locations (number of particles n remains the same) and their weights
         """
-        #### TODO: XXXXXXXXXXX
 
         n = p.shape[1]
         r = np.random.uniform(0, 1 / n)
@@ -175,7 +165,7 @@ class slam_t:
         Return an array 2 x num_rays which are the (x,y) locations of the end point of each ray
         in world coordinates
         """
-        #### TODO: XXXXXXXXXXX
+
 
         # make sure each distance >= dmin and <= dmax, otherwise something is wrong in reading
         # the data
@@ -237,7 +227,6 @@ class slam_t:
         if t == 0:
             return np.zeros(3)
 
-        #### TODO: XXXXXXXXXXX
 
         pose_cur = np.array([s.lidar[t]['xyth'][0], s.lidar[t]['xyth'][1], s.lidar[t]['rpy'][2]])
         pose_prev = np.array([s.lidar[t - 1]['xyth'][0], s.lidar[t - 1]['xyth'][1], s.lidar[t - 1]['rpy'][2]])
@@ -247,7 +236,6 @@ class slam_t:
         """"
         Compute the control using get_control and perform that control on each particle to get the updated locations of the particles in the particle filter, remember to add noise using the smart_plus_2d function to each particle
         """
-        #### TODO: XXXXXXXXXXX
 
         delta_pose = s.get_control(t)
         for i in range(s.p.shape[1]):
@@ -261,7 +249,6 @@ class slam_t:
         Given the observation log-probability and the weights of particles w, calculate the
         new weights as discussed in the writeup. Make sure that the new weights are normalized
         """
-        #### TODO: XXXXXXXXXXX
         pi = np.log(w) + obs_logp
         qi = slam_t.log_sum_exp(pi)
         ri = np.exp(pi - qi)
@@ -283,7 +270,6 @@ class slam_t:
             3. Find the particle with the largest weight, and use its occupied cells to update the map.log_odds and map.cells.
         You should ensure that map.cells is recalculated at each iteration (it is simply the binarized version of log_odds). map.log_odds is of course maintained across iterations.
         """
-        #### TODO: XXXXXXXXXXX
 
         imu_data = s.lidar[t]['rpy']
 

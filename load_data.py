@@ -65,5 +65,4 @@ joint_names = ['Neck','Head','ShoulderL', 'ArmUpperL', 'LeftShoulderYaw','ArmLow
 joint_name_to_index = {k:v for v,k in zip(range(len(joint_names)), joint_names)}
 joint_index_to_name = {v:k for v,k in zip(range(len(joint_names)), joint_names)}
 
-# dj = load_lidar_data("C:/Users/Dell/Desktop/ESE_650/hw3_p2/data/train/train_lidar1.mat")
-# show_lidar(dj)
+
