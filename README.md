@@ -11,8 +11,8 @@ This project was done as a part of the course ESE650 : Learning  in Robotics at 
 
 <table>
   <tr>
-      <td align = "center"> <img src="./Results/map1.png" /> </td>
-      <td align = "center"> <img src="./Results/map2.png" /> </td>
+      <td align = "center"> <img src="./Results/map1.PNG" /> </td>
+      <td align = "center"> <img src="./Results/map2.PNG" /> </td>
   </tr>
   <tr>
       <td align = "center"> World 1 </td>
@@ -22,8 +22,8 @@ This project was done as a part of the course ESE650 : Learning  in Robotics at 
 
 <table>
   <tr>
-      <td align = "center"> <img src="./Results/map3.png" /> </td>
-      <td align = "center"> <img src="./Results/map4.png" /> </td>
+      <td align = "center"> <img src="./Results/map3.PNG" /> </td>
+      <td align = "center"> <img src="./Results/map4.PNG" /> </td>
   </tr>
   <tr>
       <td align = "center"> World 3 </td>
